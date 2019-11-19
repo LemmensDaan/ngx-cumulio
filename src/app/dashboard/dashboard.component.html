@@ -1,0 +1,20 @@
+<!-- Toolbar -->
+<div class="main">
+    <div class="toolbar" role="banner">
+      <!-- Tabs -->
+      <ul class="tabs">
+        <li *ngFor="let tab of tabs; index as i" [class.active]="tabIdx==i"
+          (click)="changeTab(i)">{{tab}}</li>
+      </ul>
+    </div>
+    <div class="content" role="main">
+      <!-- Content -->
+       <cumulio-dashboard 
+          [(dashboard)]="dashboardId"
+          [loaderBackground]="'rgb(238, 243, 246)'"
+          [loaderFontColor]="'rgb(124, 40, 124)'"
+          [loaderSpinnerColor]="'rgb(124, 40, 124)'"
+          [loaderSpinnerBackground]="'rgb(194, 209, 233)'">
+      </cumulio-dashboard>
+    </div>
+  </div>
