@@ -6,8 +6,7 @@
 
 - [What we will build](#What-we-will-build)
 - [Part 2 - Multipage application mith several dashboards](#Part-2---Embedding-dashboards-in-a-multipage-application)
-  - [Displaying the dashboard](#Displaying-the-dashboard)
-  - [Code](#Code)
+- [Code](#Code)
 - [Conclusion](#Conclusion)
 - [Quick Links](#Quick-Links)
 
@@ -327,7 +326,7 @@ Also add some changes to the **`dashboard.component.scss`** file, you can always
 
 ---
 
-## Code
+# Code
 [Github Code](https://github.com/LemmensDaan/ngx-cumulio-demo-part2)  
 
 ---
