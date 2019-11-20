@@ -5,7 +5,7 @@
 # Contents
 
 - [What we will build](#What-we-will-build)
-- [Part 2 - Multipage application mith several dashboards](#Part-2---Embedding-dashboards-in-a-multipage-application)
+- [Part 2 - Embedding dashboards in a multipage application](#Part-2---Embedding-dashboards-in-a-multipage-application)
 - [Code](#Code)
 - [Conclusion](#Conclusion)
 - [Quick Links](#Quick-Links)
@@ -22,7 +22,7 @@ For this part we will make a multipage website with a few dashboards.
 # Part 2 - Embedding dashboards in a multipage application
 
 We will pick up where we left at part 1.
-Let's start first with adding our pages. We'll have two: home and dashboard.
+Let's first start with adding our pages. We'll have two: home and dashboard.
 
 ```bash
 ng generate component home
@@ -56,7 +56,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 ```
 
-Then, make a navbar menu in **`app.component.html`**:
+Then, make a navbar menu in **`app.component.html`** so that we can access our components:
 
 ```HTML
 <nav class="navbar">
@@ -78,7 +78,7 @@ Then, make a navbar menu in **`app.component.html`**:
 <footer class="footer"><span></span></footer>
 ```
 
-And add the css in **`app.component.scss`**:
+And add some css in **`app.component.scss`**:
 
 ```CSS
 :host {
@@ -154,7 +154,7 @@ And add the css in **`app.component.scss`**:
 }
 ```
 
-Now our pages will work. The first page _home_ will display a simple home page. THe dashboard component will eventually show a few tabs with each a dashboard.
+Now the routing to our components will work. The _home_ component will display a simple home page. The _dashboard_ component will eventually show a few tabs with a dashboard on each tab.
 We will first add some simple HTML and CSS for our home page.
 **`home.component.html`**:
 
@@ -188,8 +188,8 @@ We will first add some simple HTML and CSS for our home page.
 
 ```
 
-Now for our dashboard component.
-Let's add some dashboards and tabs first in our **`dashboard.component.ts`**:
+Now for our dashboard component. Here we can add our dashboards and tabs.   
+**`dashboard.component.ts`**:
 
 ```Typescript
 export class AppComponent implements OnInit{
@@ -204,7 +204,7 @@ export class AppComponent implements OnInit{
 }
 ```
 
-You can use your own dashboards and tabs if you want.
+You can use your own dashboards if you want.
 Now we want to go to different dashboards depending on which tab we are on.
 
 ```Typescript
@@ -224,8 +224,6 @@ export class AppComponent implements OnInit{
   }
 }
 ```
-
-When we startup our application we will show tab 0, so also the first dashboard in our array. When we go to another tab, another dashboard will show.
 
 Now we will edit the **`dashboard.component.html`** so that we can actually see the tabs and dashboards.
 Add the tabs to the toolbar. This will show all tabs, this way when you click on a tab, it will show you the dashboard from the same index as your tabs.
@@ -252,8 +250,7 @@ to
 [(dashboard)]="dashboardId"
 ```
 
-Now you only need 1 cumulio-dashboard element. all the parameters will be used with all the dashboards.
-
+Now you only need 1 cumulio-dashboard element, the same parameters will be used with all the dashboards.
 Also add some changes to the **`dashboard.component.scss`** file, you can always use your own styling.
 
 ```CSS
