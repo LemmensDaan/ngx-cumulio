@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
   tabIdx: 0;
   dashboardId = '';
-  title = 'my-website';
   tabs = [ 'Facebook', 'LinkedIn', 'Adwords'];
   dashboards = [
     '763177aa-9b93-4ae7-903e-3cb07dc593d8',
