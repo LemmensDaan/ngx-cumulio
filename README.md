@@ -260,7 +260,7 @@ Also add some changes to the **`dashboard.component.scss`** file, you can always
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: rgb(124, 40, 124);
+  background-color: rgb(7,89,139);
   color: white;
   font-weight: 600;
   position: relative;
